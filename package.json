@@ -1,7 +1,15 @@
 {
-  "name": "cli-script",
-  "version": "1.0.0",
-  "repository": "https://gitlab.com/wvcode/javascript/cli-script.git",
+  "name": "@wvcode/cli",
+  "version": "0.0.1",
+  "repository": "https://gitlab.com/wvcode/cli.git",
   "author": "Walter Ritzel <wpcortes@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "wv": "./index.js"
+  },
+  "dependencies": {
+    "@wvcode/requests": "^0.0.2",
+    "commander": "^7.2.0"
+  }
 }
