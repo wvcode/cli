@@ -69,12 +69,25 @@ module.exports = function (projectName) {
   const indexjs = `#! /usr/bin/env node
     console.log('Hello, World!')`
 
+  console.log(`Gerando arquivos para o projeto ${projectName}...`)
+
+  console.log(`Gerando arquivo .editorConfig`)
   fs.writeFileSync('.editorconfig', editorConfig)
+
+  console.log(`Gerando arquivo .eslintrc`)
   fs.writeFileSync('.eslintrc', eslintrc)
+
+  console.log(`Gerando arquivo .prettierrc`)
   fs.writeFileSync('.prettierrc', prettierrc)
+
+  console.log(`Gerando arquivo package.json`)
   fs.writeFileSync('package.json', packagejson)
+
+  console.log(`Gerando arquivo index.js`)
   fs.writeFileSync('index.js', indexjs)
+
+  console.log(`Instalando pacotes básicos...`)
   exec('npm install', function (error, stdOut, stdErr) {
-    console.log('done.')
+    console.log('Processo finalizado.')
   })
 }

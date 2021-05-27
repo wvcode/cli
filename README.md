@@ -1,35 +1,39 @@
-# Template de Script
+# WVCode cli - Ferramenta de Linha de Comando
 
-O script é um template para projetos de script node de linha de comando simples.
+O WVCode cli tool é uma ferramenta de linha de comando para ajudar você em suas tarefas diárias como dev.
 
-Scripts de linha de comando são aqueles scripts que você utiliza no prompt de comando, chamando o executável do node, como no exemplo abaixo:
+Para instalar o WVCode cli, use o npm ou yarn:
 
-```cmd
-/path/to/folder/node script.js
+```
+npm install -g @wvcode/cli
 ```
 
-Este template tem o objetivo de ajuda-lo a configurar o seu editor de código preferido (o nosso é o VSCode), para ajuda-lo a escrever um código que seja, além de funcional, bonito.
+ou
 
-Outra característica é que este template também tem o arquivo package.json. Se você já aprendeu um pouco sobre nodejs, sabe que esse arquivo é normalmente gerado pelo comando **npm init**, para indicar para o node que existe um projeto ali. Então, ao baixar esse repositório, você já tem um projeto node prontinho para usar!
-
-Ele contém os seguintes arquivos:
-
-- .editorconfig - setar configurações independente do editor sendo utilizado
-- .eslintrc - configurações padrão para o javascript lintero
-- .gitignore - lista de folders a serem excluídos do processo de commit/pull/push
-- .prettierrc - regras de formatação do código
-- package.json - dependências e configurações.
+```
+yarn add -g @wvcode/cli
+```
 
 ## Como utilizar
 
-Para usar esse repositório, você pode fazer o seguinte:
+Após a instalação, em qualquer diretório em seu computador, utilize o comando **wv**. Para saber quais são os comandos disponíveis:
 
-- Fazer o download, clicando no link de download na interface do Gitlab
-- Se você tem uma conta no gitlab:
-  - pode utilizar a funcionalidade de Fork, para duplicar o repositório
-  - pode clonar o repositório no seu computador e depois mudar o apontamento do repositório remoto para o seu próprio repositório
+```
+$ wv --help
+Usage: index [options] [command]
 
-Caso você não tenha uma conta no gitlab, a opção de clonar o repositório também irá funcionar, sem problemas!
+Options:
+  -V, --version   output the version number
+  -h, --help      display help for command
+
+Commands:
+  requests        process web requests (REST APIS only)
+  encode <value>  Encode to Base64
+  decode <value>  Decode to UTF-8
+  file            rotinas de convers├úo de arquivos
+  project         rotinas de manipula├º├úo de projetos
+  help [command]  display help for command
+```
 
 ## Finalizando
 

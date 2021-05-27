@@ -9,7 +9,8 @@
     "wv": "./index.js"
   },
   "dependencies": {
-    "@wvcode/requests": "^0.0.2",
+    "@wvcode/requests": "^0.0.4",
+    "@wvcode/utils": "^1.0.1",
     "commander": "^7.2.0"
   }
 }
