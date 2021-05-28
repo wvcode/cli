@@ -16,67 +16,41 @@ const program = new Command()
 program.version('0.0.1')
 
 //Comando de Requests - Operações com REST API
-const requests = program
-  .command('requests')
-  .description('process web requests (REST APIS only)')
+const requests = program.command('requests').description('process web requests (REST APIS only)')
 
 requests
   .command('get <url>')
   .description('Acessa uma REST API e retorna o conteúdo')
   .option('-f, --file <filename>', 'Salva o conteúdo em arquivo')
-  .option(
-    '-c, --config <configfilename>',
-    'caminho para o arquivo de configuração'
-  )
+  .option('-c, --config <configfilename>', 'caminho para o arquivo de configuração')
   .option('-a, --auth', 'usa autenticação', false)
   .addOption(
     new Option('-t, --typeauth <type>', 'tipo de autenticação')
-      .choices(['Basic', 'NTLM', null])
+      .choices(['Basic', 'NTLM', 'ntlm', 'basic', null])
       .default(null)
   )
-  .option(
-    '-s, --security <securityfilename>',
-    'caminho para o arquivo contendo credenciais de acesso'
-  )
+  .option('-s, --security <securityfilename>', 'caminho para o arquivo contendo credenciais de acesso')
   .action(requestAction)
 
 //Comandos para fazer o encode/decode de strings
-program
-  .command('encode <value>')
-  .description('Encode to Base64')
-  .action(encodeAction)
+program.command('encode <value>').description('Encode to Base64').action(encodeAction)
 
-program
-  .command('decode <value>')
-  .description('Decode to UTF-8')
-  .action(decodeAction)
+program.command('decode <value>').description('Decode to UTF-8').action(decodeAction)
 
 // Comandos de conversão de arquivos
-const file = program
-  .command('file')
-  .description('rotinas de conversão de arquivos')
+const file = program.command('file').description('rotinas de conversão de arquivos')
 
 file
   .command('convert')
   .description('converte uma lista de arquivos')
   .option('-s, --source <filename...>', 'lista de arquivos de origem')
-  .addOption(
-    new Option(
-      '-t, --target <formatType>',
-      ' formato do(s) arquivo(s) de destino'
-    ).choices(['json', 'csv'])
-  )
+  .addOption(new Option('-t, --target <formatType>', ' formato do(s) arquivo(s) de destino').choices(['json', 'csv']))
   .action(convertFileAction)
 
 //Comando de Manipulação de projetos
-const project = program
-  .command('project')
-  .description('rotinas de manipulação de projetos')
+const project = program.command('project').description('rotinas de manipulação de projetos')
 
-project
-  .command('create <projectname>')
-  .description('cria um novo projeto node')
-  .action(createProjectAction)
+project.command('create <projectname>').description('cria um novo projeto node').action(createProjectAction)
 
 //Inicializa o parser
 program.parse()

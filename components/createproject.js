@@ -49,8 +49,9 @@ module.exports = function (projectName) {
       "semi": false,
       "singleQuote": true,
       "arrowParens": "avoid",
-      "trainlingComma": "none",
-      "endOfLine": "auto"
+      "trailingComma": "none",
+      "endOfLine": "auto",
+      "printWidth": "120"
     }`
 
   const packagejson = `{
