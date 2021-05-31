@@ -1,7 +1,8 @@
 {
   "name": "@wvcode/cli",
-  "version": "0.0.1",
-  "repository": "https://gitlab.com/wvcode/cli.git",
+  "description": "O WVCode cli tool é uma ferramenta de linha de comando para ajudar você em suas tarefas diárias como dev.",
+  "version": "0.0.2",
+  "repository": "https://github.com/wvcode/cli.git",
   "author": "Walter Ritzel <wpcortes@gmail.com>",
   "license": "MIT",
   "main": "index.js",
@@ -9,8 +10,8 @@
     "wv": "./index.js"
   },
   "dependencies": {
-    "@wvcode/requests": "^0.0.4",
-    "@wvcode/utils": "^1.0.1",
+    "@wvcode/requests": "^0.0.5",
+    "@wvcode/utils": "^1.0.5",
     "commander": "^7.2.0"
   }
 }

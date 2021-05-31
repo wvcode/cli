@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@wvcode/requests@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@wvcode/requests/-/requests-0.0.4.tgz#76f28c1a3df5003169f571a15e9565dfed16c191"
-  integrity sha512-uulGXIqY9vDjV4qre0DnJRXExkKfpC4ZVLtuE1qgfJeFE2+CBHX5KvL53biUt/5pI8s6tksj2hsQPqU/6hoUUQ==
+"@wvcode/requests@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@wvcode/requests/-/requests-0.0.5.tgz#11834d321f643bcee5e57ff1562875ca17d5cc66"
+  integrity sha512-njwTDTyMzBzpNpwPydYQoriHHh+voIq2gkZ8sp4LFn00LiLn2Fs8/kTLSbNixbDTekTqlqoz+sRgo1l/jB7GMw==
   dependencies:
     axios "^0.21.1"
     httpntlm "^1.7.7"
     lodash "^4.17.21"
 
-"@wvcode/utils@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@wvcode/utils/-/utils-1.0.1.tgz#7b1c034606c428c5cad12249a995317926b3bd3b"
-  integrity sha512-Ue4WFra4UQ12Vl+XAtSugqO0uqRuRO2XsEy+GkAVese+DQCmropuGkkEmz4dIeE7xtPCVPknwB3AmKy6S7N44Q==
+"@wvcode/utils@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@wvcode/utils/-/utils-1.0.5.tgz#92723971d7facf0d4a13bfa0b6f8cf63ffa8f3de"
+  integrity sha512-Ia7wj/wYrdE1xvl/qka1fOvpS5miHVaL7c9Qz63rPR+WEI7pvlMdywF+rKHj0YF1tFqzjjijBBbho4wuSLdnXA==
   dependencies:
     neat-csv "^6.0.1"
     objects-to-csv "^1.3.6"
