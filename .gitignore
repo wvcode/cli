@@ -1,4 +1,7 @@
 ﻿.vscode/
 /node_modules
 /logs
+/input
+/output
+
 

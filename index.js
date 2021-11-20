@@ -11,6 +11,7 @@ const decodeAction = require('./components/decode')
 const createProjectAction = require('./components/createproject')
 const convertFileAction = require('./components/convertfile')
 const convertExcelAction = require('./components/convertexcel')
+const processSurveyAction = require('./components/processsurvey')
 
 const program = new Command()
 // atribui a versão do cli
@@ -62,6 +63,20 @@ excel
 //Comando de Manipulação de projetos
 const project = program.command('project').description('rotinas de manipulação de projetos')
 project.command('create <projectname>').description('cria um novo projeto node').action(createProjectAction)
+
+//Comando de processamento de dados de surveys
+const form = program.command('survey').description('rotinas para processamento de dados de surveys')
+form
+  .command('process')
+  .description('processa o arquivo')
+  .option('-s, --source <filename...>', 'nome do arquivo de origem')
+  .option('-t, --target-folder <path>', 'nome do diretorio onde armazenar os arquivos processados', './')
+  .addOption(
+    new Option('-f, --format <type>', 'formato do arquivo de destino')
+      .choices(['csv', 'CSV', 'json', 'JSON', 'Csv', 'Json'])
+      .default('csv')
+  )
+  .action(processSurveyAction)
 
 //Inicializa o parser
 program.parse()
