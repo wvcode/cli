@@ -15,7 +15,7 @@ const processSurveyAction = require('./components/processsurvey')
 
 const program = new Command()
 // atribui a versão do cli
-program.version('0.0.1')
+program.version('0.0.6')
 
 //Comando de Requests - Operações com REST API
 const requests = program.command('requests').description('process web requests (REST APIS only)')

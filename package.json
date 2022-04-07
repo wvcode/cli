@@ -1,7 +1,7 @@
 {
   "name": "@wvcode/cli",
   "description": "O WVCode cli tool é uma ferramenta de linha de comando para ajudar você em suas tarefas diárias como dev.",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "repository": "https://github.com/wvcode/cli.git",
   "author": "Walter Ritzel <wpcortes@gmail.com>",
   "license": "MIT",

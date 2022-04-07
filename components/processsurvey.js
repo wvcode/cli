@@ -12,6 +12,7 @@ module.exports = async function (options) {
     for (var file of options.source) {
       let records = []
       let record_id = 1
+
       const sourceExt = path.extname(file)
       const targetName = path.join(
         options.targetFolder,
